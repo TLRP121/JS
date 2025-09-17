@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        #para {
+            padding: 20px;
+            border: 2px solid #333;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"> Click, Hover, or Double Click Me!</p>
+   
+  
+
+    <script>
+        $(document).ready(function(){
+            // Click → change text color
+            $("#para").click(function(){
+                $(this).css("color","green");
+            });
+
+            // Hover → change background
+            $("#para").mouseenter(function(){
+                $(this).css("background","lightcoral");
+            });
+            $("#para").mouseleave(function(){
+                $(this).css("background","yellow");
+            });
+
+            // Double-click → increase font size
+            $("#para").dblclick(function(){
+                $(this).css("font-size","30px");
+            });
+
+            
+            
+        });
+    </script>
+</body>
+</html>
