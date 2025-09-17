@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Show Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        #para {
+            padding: 15px;
+            border: 2px solid #333;
+            background: #f9f9f9;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"> This is a paragraph that you can hide and show!</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#para").hide();
+            });
+            $("#show").click(function(){
+                $("#para").show();
+            });
+        });
+    </script>
+</body>
+</html>
