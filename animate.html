@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Box</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: relative;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="btn">Click to Move</button>
+    <div id="box"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#box").animate({
+                    left: '250px',
+                    opacity:'0.5',
+                    width:'500px'
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
