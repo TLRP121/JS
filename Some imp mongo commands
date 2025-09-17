@@ -1,0 +1,10 @@
+#To replicate data base
+db.st.aggregate([{$match:{}},{$out:{db:"studentCopy",coll:"stCopy"}}])
+
+#To sum,min,max,avg
+db.shop.aggregate([{$group:{_id:null,totalQuantity:{$sum:"$qty"},averagePrice:{$avg:"$price"},minPrice:{$min:"$price"},maxPrice:{$max:"$price"}}}])
+
+#To push and addToSet
+db.shopping.aggregate([{$group:{_id:"$customer",allitems:{$push:"$item"}}}])
+
+db.shopping.aggregate([{$group:{_id:"$customer",uniqueItems:{$addToSet:"$item"}}}])
