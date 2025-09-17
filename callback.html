@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <p id="para">This will fade the text in and out</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#para").fadeOut(1000,function(){
+                    alert("Text is hidden now")
+                }); 
+            });
+        });
+    </script>
+</body>
+</html>
